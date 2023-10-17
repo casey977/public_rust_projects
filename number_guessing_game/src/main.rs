@@ -6,11 +6,12 @@ fn main() {
 	let mut input = String::new();
 
 	loop {
+		println!("Guess a number between 0 and 100 (both inclusive): ");
+
 		io::stdin()
 			.read_line(&mut input)
 			.expect("ERROR: Failed to read line!");
-
-		println!("Guess a number between 0 and 100 (both inclusive): ");
+		
 		let number:i8 = match input.trim().parse()
 	}
 }
