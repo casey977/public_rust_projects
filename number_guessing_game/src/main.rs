@@ -13,7 +13,7 @@ fn main() {
 			.read_line(&mut input)
 			.expect("ERROR: Failed to read line!");
 		
-		match input.trim().parse::<i8>() {
+		match input.trim().parse() {
 			Ok(parsed_num) => {
 				number = parsed_num;
 				break;
