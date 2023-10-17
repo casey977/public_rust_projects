@@ -20,7 +20,14 @@ fn main() {
 		match input.trim().parse() {
 			Ok(parsed_num) => {
 				number = parsed_num;
-				if(number >= 0 && number <= 100) {
+				if (number >= 0 && number <= 100) {
+					if (number > random_number) {
+						eprintln!("Your guess is too high!");
+					} else if (number < random_number) {
+						eprintln!("Your guess is too low!");
+					} else {
+						eprintln!("You guessed correct!");
+					}
 					break;
 				} else {
 					continue;
