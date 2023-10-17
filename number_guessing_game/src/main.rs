@@ -30,7 +30,7 @@ fn main() {
 						eprintln!("You guessed correct!");
 						exit(0);
 					}
-					break;
+					continue;
 				} else {
 					continue;
 				}
