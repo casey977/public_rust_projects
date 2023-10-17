@@ -1,6 +1,7 @@
 use std::env;
 use std::io;
 use rand::Rng;
+use std::process.exit();
 
 fn main() {
 	let cmd_args:Vec<String> = env::args().collect();
