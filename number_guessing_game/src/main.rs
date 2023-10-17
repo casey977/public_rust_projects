@@ -4,6 +4,7 @@ use std::io;
 fn main() {
 	let cmd_args:Vec<String> = env::args().collect();
 	let mut input = String::new();
+	let mut number:i8 = 99;
 
 	loop {
 		println!("Guess a number between 0 and 100 (both inclusive): ");
@@ -12,9 +13,9 @@ fn main() {
 			.read_line(&mut input)
 			.expect("ERROR: Failed to read line!");
 		
-		let number:i8 = match input.trim().parse() {
+		match input.trim().parse::<i8>() {
 			Ok(parsed_num) => {
-				parsed_num;
+				number = parsed_num;
 				break;
 			},
 			Err(_) => {
