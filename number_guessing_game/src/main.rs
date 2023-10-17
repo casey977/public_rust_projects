@@ -16,7 +16,11 @@ fn main() {
 		match input.trim().parse() {
 			Ok(parsed_num) => {
 				number = parsed_num;
-				break;
+				if(number >= 0 && number <= 100) {
+					break;
+				} else {
+					continue;
+				}
 			},
 			Err(_) => {
 				eprintln!("Invalid input!");
