@@ -28,6 +28,7 @@ fn main() {
 						eprintln!("Your guess is too low!");
 					} else {
 						eprintln!("You guessed correct!");
+						exit(0);
 					}
 					break;
 				} else {
