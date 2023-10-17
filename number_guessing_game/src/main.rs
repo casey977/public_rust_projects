@@ -13,7 +13,10 @@ fn main() {
 			.expect("ERROR: Failed to read line!");
 		
 		let number:i8 = match input.trim().parse() {
-			Ok(parsed_num) => parsed_num,
+			Ok(parsed_num) => {
+				parsed_num;
+				break;
+			},
 			Err(_) => {
 				eprintln!("Invalid input!");
 				continue;
