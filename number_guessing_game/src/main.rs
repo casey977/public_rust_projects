@@ -24,7 +24,7 @@ fn main() {
 			},
 			Err(_) => {
 				eprintln!("Invalid input!");
-				continue;
+				break;
 			}
 		};
 	}
