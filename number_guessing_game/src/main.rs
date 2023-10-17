@@ -20,5 +20,7 @@ fn main() {
 			}
 		};
 	}
+
+	println!("You entered: {}", number);
 }
 
