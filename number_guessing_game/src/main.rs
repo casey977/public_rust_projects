@@ -12,7 +12,13 @@ fn main() {
 			.read_line(&mut input)
 			.expect("ERROR: Failed to read line!");
 		
-		let number:i8 = match input.trim().parse()
+		let number:i8 = match input.trim().parse() {
+			Ok(parsed_num) => parsed_num,
+			Err(_) => {
+				eprintln!("Invalid input!");
+				continue;
+			}
+		};
 	}
 }
 
